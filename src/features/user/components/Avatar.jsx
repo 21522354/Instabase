@@ -1,5 +1,9 @@
-function Avatar({src}){
-    return(
-        <Image src = {src}/>
-    )
+import "./Avatar.css";
+
+function Avatar({ src, alt = "" }) {
+    return (
+        <img className="image" src={src} alt={alt} />
+    );
 }
+
+export default Avatar;

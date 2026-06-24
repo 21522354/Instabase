@@ -1,5 +1,5 @@
-import React, { useId } from 'react';
-import styles from './TextBox.module.css';
+import { useId } from 'react';
+import './TextBox.css';
 
 function TextBox({ 
     label, 
@@ -13,18 +13,18 @@ function TextBox({
     const inputId = props.id || defaultId;
 
     return (
-        <div className={styles.container}>
+        <div className="container my-2">
             <input
                 id={inputId}
                 type={type}
-                className={styles.input}
+                className="input"
                 value={value}
                 onChange={onChange}
                 /* Khoảng trắng ở placeholder rất quan trọng để thủ thuật CSS hoạt động */
                 placeholder=" " 
                 {...props}
             />
-            <label htmlFor={inputId} className={styles.label}>
+            <label htmlFor={inputId} className="label">
                 {label}
             </label>
         </div>

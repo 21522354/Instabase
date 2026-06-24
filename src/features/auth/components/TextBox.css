@@ -1,10 +1,10 @@
 .container {
     position: relative;
     width: 100%;
-    height: 52px; /* Chiều cao tiêu chuẩn cho ô nhập liệu */
+    height: 60px; /* Chiều cao tiêu chuẩn cho ô nhập liệu */
     background-color: #121212; /* Màu nền tối giống trong hình */
-    border: 1px solid #3a3b3c; /* Viền xám nhạt mặc định */
-    border-radius: 8px; /* Bo góc */
+    border: 1px solid #5c5d5e; /* Viền xám nhạt mặc định */
+    border-radius: 20px; /* Bo góc */
     display: flex;
     align-items: center;
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
@@ -15,6 +15,10 @@
 .container:focus-within {
     border-color: #0095f6; /* Màu xanh đặc trưng */
     box-shadow: 0 0 0 1px #0095f6; /* Làm viền dày hơn một chút */
+}
+
+.container:not(:focus-within):hover {
+    border-color: #a8a8a8;
 }
 
 .input {
